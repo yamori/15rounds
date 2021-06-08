@@ -1,4 +1,4 @@
-package bishop
+package pieces
 
 import (
 	"fmt"
@@ -7,11 +7,11 @@ import (
 type bishop struct {
 }
 
-func New() bishop {
+func NewBishop() bishop {
 	b := bishop{}
 	return b
 }
 
-func (e bishop) LeavesRemaining() {
+func (e bishop) ExamplePrintln() {
 	fmt.Printf("Bishop's println...\n")
 }
