@@ -1,9 +1,5 @@
 package pieces
 
-import (
-	"fmt"
-)
-
 type bishop struct {
 }
 
@@ -12,6 +8,6 @@ func NewBishop() bishop {
 	return b
 }
 
-func (e bishop) ExamplePrintln() {
-	fmt.Printf("Bishop's println...\n")
+func (b bishop) ToString() string {
+	return "I am a Bishop"
 }

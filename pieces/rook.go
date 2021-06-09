@@ -1,17 +1,13 @@
 package pieces
 
-import (
-	"fmt"
-)
-
 type rook struct {
 }
 
 func NewRook() rook {
-	b := rook{}
-	return b
+	r := rook{}
+	return r
 }
 
-func (e rook) ExamplePrintln() {
-	fmt.Printf("Rook's println...\n")
+func (r rook) ToString() string {
+	return "I am a Bishop"
 }

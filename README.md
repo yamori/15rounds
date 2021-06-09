@@ -4,4 +4,8 @@ Bishop stationary at `c3`, Rook starts at `h1`.  The Rook takes a random (board 
 
 ## Development considerations
 
-- Prompt asked for OOP, but GO seems to not have classes in the classical sense.  Instead a clever way of a Struct dedicated to a package and appropriately typed functions.
+- Prompt asked for OOP, but GO seems to not have classes in the classical sense.  Instead a clever way of a Struct dedicated to a package and appropriately typed functions and interfaces.
+
+## Things I learned...
+
+- Associate a function with a type: `func (e board) ExamplePrintln() {`
