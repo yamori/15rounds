@@ -19,4 +19,5 @@ func main() {
 	brd := board.NewBoard(fld)
 	fmt.Println(brd.ToString())
 	brd.PrintBoard()
+	fmt.Println(bishop.CanCapture(2, 2, 1, 3))
 }
