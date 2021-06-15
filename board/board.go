@@ -2,37 +2,36 @@ package board
 
 import (
 	"fmt"
-	"math"
 	"reflect"
 	"strconv"
 	"yamori/15rounds/pieces"
 )
 
 type board struct {
-	field [64]pieces.Piece
+	field [8][8]pieces.Piece
 }
 
-func NewBoard(m [64]pieces.Piece) board {
+func NewBoard(m [8][8]pieces.Piece) board {
 	b := board{
 		field: m,
 	}
 	return b
 }
 
-func convertLinearToCoord(n int) string {
-	col := [8]string{"a", "b", "c", "d", "e", "f", "g", "h"}
-	coldIndx := int(math.Floor(float64(n) / 8.0))
-	rmndr := strconv.Itoa((n % 8) + 1)
-	return col[coldIndx] + rmndr
+func convertIndicesToCoords(col int, row int) string {
+	colMap := [8]string{"a", "b", "c", "d", "e", "f", "g", "h"}
+	return colMap[col] + strconv.Itoa(row+1)
 }
 
 func (b board) PrintBoard() {
-	for i, v := range b.field {
-		if v == nil {
-			fmt.Printf("%v:()\n", convertLinearToCoord(i))
-		} else {
-			fmt.Printf("%v:%v\n", convertLinearToCoord(i), reflect.TypeOf(v))
-			fmt.Println(v.ToString())
+	for col, colArr := range b.field {
+		for row, v := range colArr {
+			if v == nil {
+				fmt.Printf("%v:()\n", convertIndicesToCoords(col, row))
+			} else {
+				fmt.Printf("%v:%v\n", convertIndicesToCoords(col, row), reflect.TypeOf(v))
+				fmt.Println(v.ToString())
+			}
 		}
 	}
 }
