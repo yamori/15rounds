@@ -2,10 +2,10 @@ package pieces
 
 import "fmt"
 
-type piece interface {
+type Piece interface {
 	ToString() string
 }
 
-func PrintName(p piece) {
+func PrintName(p Piece) {
 	fmt.Println(p.ToString())
 }

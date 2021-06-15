@@ -1,13 +1,13 @@
 package pieces
 
-type rook struct {
+type Rook struct {
 }
 
-func NewRook() rook {
-	r := rook{}
+func NewRook() Rook {
+	r := Rook{}
 	return r
 }
 
-func (r rook) ToString() string {
+func (r Rook) ToString() string {
 	return "I am a Bishop"
 }

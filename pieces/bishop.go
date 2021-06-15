@@ -1,13 +1,13 @@
 package pieces
 
-type bishop struct {
+type Bishop struct {
 }
 
-func NewBishop() bishop {
-	b := bishop{}
+func NewBishop() Bishop {
+	b := Bishop{}
 	return b
 }
 
-func (b bishop) ToString() string {
+func (b Bishop) ToString() string {
 	return "I am a Bishop"
 }
