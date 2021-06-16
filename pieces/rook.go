@@ -14,5 +14,5 @@ func (b Rook) CanCapture(ownCol int, ownRow int, tgtCol int, tgtRow int) bool {
 }
 
 func (r Rook) ToString() string {
-	return "I am a Bishop"
+	return "I am a Rook"
 }
